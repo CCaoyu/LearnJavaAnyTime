@@ -75,7 +75,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.7.RELEASE</version>
                 <configuration>
-                    <mainClass>com.learnjavaanytime.learnmember.LearnMemberApplication</mainClass>
+                    <mainClass>com.learnjavaanytime.member.LearnMemberApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

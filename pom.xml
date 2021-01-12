@@ -15,5 +15,8 @@
         <module>learn-question</module>
         <module>learn-study</module>
         <module>learn-channel</module>
+        <module>renren-fast</module>
+        <module>renren-generator</module>
+        <module>learn-common</module>
     </modules>
 </project>

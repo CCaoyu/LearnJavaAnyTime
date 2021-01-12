@@ -1,13 +1,13 @@
-package com.learnjavaanytime.learnquestion;
+package com.learnjavaanytime.content;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LearnQuestionApplication {
+public class LearnContentApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LearnQuestionApplication.class, args);
+        SpringApplication.run(LearnContentApplication.class, args);
     }
 
 }

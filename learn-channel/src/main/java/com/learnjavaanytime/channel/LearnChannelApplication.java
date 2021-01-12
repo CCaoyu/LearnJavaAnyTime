@@ -1,13 +1,13 @@
-package com.learnjavaanytime.learncontent;
+package com.learnjavaanytime.channel;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LearnContentApplication {
+public class LearnChannelApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LearnContentApplication.class, args);
+        SpringApplication.run(LearnChannelApplication.class, args);
     }
 
 }

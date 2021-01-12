@@ -1,13 +1,13 @@
-package com.learnjavaanytime.learnmember;
+package com.learnjavaanytime.study;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LearnMemberApplication {
+public class LearnStudyApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LearnMemberApplication.class, args);
+        SpringApplication.run(LearnStudyApplication.class, args);
     }
 
 }
