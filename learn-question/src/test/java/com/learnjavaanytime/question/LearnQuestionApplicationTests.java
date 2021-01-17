@@ -1,25 +1,24 @@
 package com.learnjavaanytime.question;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.learnjavaanytime.question.entity.QesTypeEntity;
-import com.learnjavaanytime.question.service.QesTypeService;
+import com.learnjavaanytime.question.entity.TypeEntity;
+import com.learnjavaanytime.question.service.TypeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.io.ByteArrayInputStream;
 import java.util.List;
 
 @SpringBootTest
 class LearnQuestionApplicationTests {
 
     @Autowired
-    QesTypeService typeService;
+    TypeService typeService;
 
     // 创建题目类型
     @Test
     void testCreateType() {
-        QesTypeEntity typeEntity = new QesTypeEntity();
+        TypeEntity typeEntity = new TypeEntity();
         typeEntity.setType("javaBasic");
         typeService.save(typeEntity);
         System.out.println("创建成功");
@@ -28,7 +27,7 @@ class LearnQuestionApplicationTests {
     // 更新题目类型
     @Test
     void testUpdateType() {
-        QesTypeEntity typeEntity = new QesTypeEntity();
+        TypeEntity typeEntity = new TypeEntity();
         typeEntity.setId(1L);
         typeEntity.setType("jvm");
         typeService.updateById(typeEntity);
@@ -38,7 +37,7 @@ class LearnQuestionApplicationTests {
     // 查询题目类型
     @Test
     void testSelectType() {
-        List<QesTypeEntity> typeEntityList = typeService.list(new QueryWrapper<QesTypeEntity>().eq("id",1L));
+        List<TypeEntity> typeEntityList = typeService.list(new QueryWrapper<TypeEntity>().eq("id",1L));
         typeEntityList.forEach((item)-> {
             System.out.println(item);
         });
@@ -48,7 +47,7 @@ class LearnQuestionApplicationTests {
     // 删除题目类型记录
     @Test
     void testRemoveType() {
-        typeService.removeById(1L);
+        typeService.removeById(2L);
         System.out.println("删除成功");
     }
 }

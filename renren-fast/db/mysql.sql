@@ -1,3 +1,7 @@
+﻿DROP DATABASE IF EXISTS 'learn_admin';
+
+CREATE DATABASE learn_admin CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
 -- 菜单
 CREATE TABLE `sys_menu` (
   `menu_id` bigint NOT NULL AUTO_INCREMENT,

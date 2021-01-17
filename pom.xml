@@ -15,8 +15,21 @@
         <module>learn-question</module>
         <module>learn-study</module>
         <module>learn-channel</module>
+        <module>learn-gateway</module>
         <module>renren-fast</module>
         <module>renren-generator</module>
         <module>learn-common</module>
     </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                    <addResources>true</addResources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
