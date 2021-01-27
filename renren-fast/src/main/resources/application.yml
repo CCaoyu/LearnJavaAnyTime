@@ -13,6 +13,12 @@ spring:
   # 环境 dev|test|prod
   profiles:
     active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: renren-fast
   # jackson时间格式化
   jackson:
     time-zone: GMT+8
@@ -51,7 +57,7 @@ mybatis-plus:
     db-config:
       #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
       id-type: AUTO
-      logic-delete-value: -1
+      logic-delete-value: 1
       logic-not-delete-value: 0
     banner: false
   #原生配置

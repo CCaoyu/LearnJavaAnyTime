@@ -22,6 +22,10 @@ class LearnQuestionApplicationTests {
         typeEntity.setType("javaBasic");
         typeService.save(typeEntity);
         System.out.println("创建成功");
+        TypeEntity typeEntity2 = new TypeEntity();
+        typeEntity2.setType("jvm");
+        typeService.save(typeEntity2);
+        System.out.println("创建成功");
     }
 
     // 更新题目类型

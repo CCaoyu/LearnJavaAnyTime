@@ -15,6 +15,15 @@ spring:
     application:
       name: learn-question
 
+    gateway:
+      routes:
+        - id: route_question # 题目微服务路由规则
+          uri: lb://learn-question # 负载均衡，将请求转发到注册中心注册的learn-question服务
+          predicates: # 断言
+          - Path=/api/question/** # 如果前端请求路径包含 api/question，则应用这条路由规则
+          filters: #过滤器
+          - RewritePath=/api/(?<segment>.*),/$\{segment}
+
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
   global-config:

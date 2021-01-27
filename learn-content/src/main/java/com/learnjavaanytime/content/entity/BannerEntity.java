@@ -7,6 +7,8 @@ import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
 
+import javax.validation.constraints.Positive;
+
 /**
  * 内容-横幅广告表
  * 
@@ -35,6 +37,7 @@ public class BannerEntity implements Serializable {
 	/**
 	 * 排序
 	 */
+	@Positive
 	private Integer displayOrder;
 	/**
 	 * 是否显示

@@ -16,6 +16,8 @@ import com.learnjavaanytime.question.service.QuestionService;
 import com.learnjavaanytime.common.utils.PageUtils;
 import com.learnjavaanytime.common.utils.R;
 
+import javax.validation.Valid;
+
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
 
 
@@ -61,7 +63,7 @@ public class QuestionController {
      */
     @RequestMapping("/save")
     @RequiresPermissions("question:question:save")
-    public R save(@RequestBody QuestionEntity question){
+    public R save(@Valid @RequestBody QuestionEntity question){
 		questionService.save(question);
 
         return R.ok();

@@ -3,6 +3,7 @@ package com.learnjavaanytime.member.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.learnjavaanytime.member.feign.StudyTimeFeignService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,6 +33,21 @@ import com.learnjavaanytime.common.utils.R;
 public class MemberController {
     @Autowired
     private MemberService memberService;
+
+    @Autowired
+    private StudyTimeFeignService studyTimeFeignService;
+
+    @RequestMapping("/studytime/list/test")
+    public R getMemberStudyTimeListTest() {
+        //mock数据库查到的会员信息
+        MemberEntity memberEntity = new MemberEntity();
+        memberEntity.setId(1L); // 学习时长：100分钟
+        memberEntity.setNickname("悟空聊架构");
+
+        //远程调用拿到该用户的学习时长（学习时长是mock数据）
+        R memberStudyTimeList = studyTimeFeignService.getMemberStudyTimeListTest();
+        return R.ok().put("member", memberEntity).put("studyTime", memberStudyTimeList.get("stuTime"));
+    }
 
     /**
      * 列表

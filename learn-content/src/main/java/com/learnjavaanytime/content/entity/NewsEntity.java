@@ -7,6 +7,8 @@ import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
 
+import javax.validation.constraints.Positive;
+
 /**
  * 内容-资讯表
  * 
@@ -35,6 +37,7 @@ public class NewsEntity implements Serializable {
 	/**
 	 * 排序
 	 */
+	@Positive
 	private Integer displayOrder;
 	/**
 	 * 跳转路径

@@ -1,4 +1,4 @@
-package com.learnjavaanytime.learngateway;
+package com.learnjavaanytime.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
